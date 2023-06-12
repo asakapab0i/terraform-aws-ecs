@@ -203,9 +203,7 @@ resource "aws_ecs_service" "this" {
   depends_on = [aws_iam_role_policy_attachment.service]
 
   lifecycle {
-    ignore_changes = [
-      desired_count, # Always ignored
-    ]
+    ignore_changes = []
   }
 }
 
